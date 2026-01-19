@@ -90,7 +90,6 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  printf("First application starting");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,8 +97,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-      printf("loop");
+
     /* USER CODE BEGIN 3 */
+    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    HAL_Delay(300);
   }
   /* USER CODE END 3 */
 }
@@ -213,7 +214,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : USER_LED_Pin */
   GPIO_InitStruct.Pin = USER_LED_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(USER_LED_GPIO_Port, &GPIO_InitStruct);

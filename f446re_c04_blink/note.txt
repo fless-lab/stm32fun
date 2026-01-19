@@ -1,0 +1,4 @@
+I've tried to configure GPIO PORT PA5 (USER LED) output level to "high" by default but with that led refused to blink
+
+
+Update : Ah non c'est pas ça.. c'était l'option Open Drain qui mettait la led en haute impédance.. ok ok
