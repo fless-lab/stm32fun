@@ -127,9 +127,6 @@ int main(void)
     if(userButtonState == GPIO_PIN_SET && lastButtonState == GPIO_PIN_RESET){
         //printf("here %d   ",switchOnOff);
         switchOnOff = !switchOnOff;
-
-        HAL_GPIO_WritePin(B1_GPIO_Port, B1_Pin, switchOnOff?GPIO_PIN_SET:GPIO_PIN_RESET);
-
     }
     lastButtonState = userButtonState;
 
