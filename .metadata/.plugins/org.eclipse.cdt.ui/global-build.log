@@ -1,21 +1,272 @@
-08:17:42 **** Incremental Build of configuration Debug for project f446re_c04_blink ****
+16:54:58 **** Incremental Build of configuration Debug for project play_a_bit ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "f446re_c04_blink.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\f446re_c04_blink\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f446re_c04_blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: f446re_c04_blink.elf
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  107 |   printf("Hello World !!!");
+      |   ^~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:107:3: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  107 |   printf("Hello World !!!");
+      |   ^~~~~~
+../Core/Src/main.c:107:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
  
-arm-none-eabi-size  f446re_c04_blink.elf 
-arm-none-eabi-objdump -h -S f446re_c04_blink.elf  > "f446re_c04_blink.list"
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
    text	   data	    bss	    dec	    hex	filename
-  16152	    104	   1976	  18232	   4738	f446re_c04_blink.elf
+  15808	    104	   1976	  17888	   45e0	play_a_bit.elf
 Finished building: default.size.stdout
  
-Finished building: f446re_c04_blink.list
+Finished building: play_a_bit.list
  
-08:17:57 **** Incremental Build of configuration Debug for project f446re_c04_blink ****
+16:55:25 **** Incremental Build of configuration Debug for project play_a_bit ****
 make -j12 all 
-arm-none-eabi-size  f446re_c04_blink.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
    text	   data	    bss	    dec	    hex	filename
-  16152	    104	   1976	  18232	   4738	f446re_c04_blink.elf
+  15788	    104	   1976	  17868	   45cc	play_a_bit.elf
 Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+17:08:06 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  15808	    104	   1976	  17888	   45e0	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+17:26:50 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16184	    104	   1976	  18264	   4758	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+18:55:37 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16284	    104	   1976	  18364	   47bc	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+18:56:28 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16268	    104	   1976	  18348	   47ac	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+18:58:22 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16268	    104	   1976	  18348	   47ac	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+18:58:44 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-size  play_a_bit.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16268	    104	   1976	  18348	   47ac	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+19:02:15 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:24: warning: unsigned conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '1000' to '232' [-Woverflow]
+  114 |   uint8_t led_timing = 1000;
+      |                        ^~~~
+../Core/Src/main.c:114:11: warning: unused variable 'led_timing' [-Wunused-variable]
+  114 |   uint8_t led_timing = 1000;
+      |           ^~~~~~~~~~
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16272	    104	   1976	  18352	   47b0	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:02:40 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16268	    104	   1976	  18348	   47ac	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:02:57 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16272	    104	   1976	  18352	   47b0	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:08:26 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16420	    104	   1976	  18500	   4844	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:09:39 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16428	    104	   1976	  18508	   484c	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:10:48 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16428	    104	   1976	  18508	   484c	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:12:03 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16432	    104	   1976	  18512	   4850	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:46:26 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:12: warning: variable 'timing' set but not used [-Wunused-but-set-variable]
+  114 |   uint16_t timing = 200;
+      |            ^~~~~~
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16372	    104	   1976	  18452	   4814	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+19:50:04 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:12: warning: variable 'timing' set but not used [-Wunused-but-set-variable]
+  114 |   uint16_t timing = 200;
+      |            ^~~~~~
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16452	    104	   1976	  18532	   4864	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
+ 
+02:11:48 **** Incremental Build of configuration Debug for project play_a_bit ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "play_a_bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\InstalledSoftware\ST\STM32CubeIDE_1.19.0\Projects\stm32fun\play_a_bit\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="play_a_bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: play_a_bit.elf
+ 
+arm-none-eabi-size  play_a_bit.elf 
+arm-none-eabi-objdump -h -S play_a_bit.elf  > "play_a_bit.list"
+   text	   data	    bss	    dec	    hex	filename
+  16432	    104	   1976	  18512	   4850	play_a_bit.elf
+Finished building: default.size.stdout
+ 
+Finished building: play_a_bit.list
  

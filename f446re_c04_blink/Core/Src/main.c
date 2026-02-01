@@ -126,6 +126,11 @@ int main(void)
           last_tick = now;
       }
 
+      GPIO_PinState bluebtnpinstate = HAL_GPIO_ReadPin(GPIOC, BLUE_BTN_Pin);
+
+      printf("Button state : %lu",bluebtnpinstate);
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -238,7 +243,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : BLUE_BTN_Pin */
   GPIO_InitStruct.Pin = BLUE_BTN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(BLUE_BTN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : USER_LED_Pin */
