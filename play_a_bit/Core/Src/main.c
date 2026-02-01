@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#define OFF 0
+#define ON 1
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,18 +113,28 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint8_t switchOnOff = 0;
+  GPIO_PinState lastButtonState = GPIO_PIN_RESET;
   GPIO_PinState userButtonState = GPIO_PIN_RESET;
   while (1)
   {
     userButtonState = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
-    printf("%d",userButtonState);
+    printf("- %d:%d(%d) -",userButtonState,lastButtonState,switchOnOff);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-    HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+    if(userButtonState == GPIO_PIN_SET && lastButtonState == GPIO_PIN_RESET){
+        //printf("here %d   ",switchOnOff);
+        switchOnOff = !switchOnOff;
 
-    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, !userButtonState);
+        HAL_GPIO_WritePin(B1_GPIO_Port, B1_Pin, switchOnOff?GPIO_PIN_SET:GPIO_PIN_RESET);
+
+    }
+    lastButtonState = userButtonState;
+
+    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, !switchOnOff);
+
     HAL_Delay(10);
   }
   /* USER CODE END 3 */
