@@ -111,9 +111,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  GPIO_PinState userButtonState = GPIO_PIN_RESET;
   while (1)
   {
-    GPIO_PinState userButtonState = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
+    userButtonState = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
     printf("%d",userButtonState);
     /* USER CODE END WHILE */
 
@@ -121,8 +122,8 @@ int main(void)
 
     HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 
-    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, (userButtonState == GPIO_PIN_RESET ? GPIO_PIN_SET : GPIO_PIN_RESET));
-
+    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, !userButtonState);
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
